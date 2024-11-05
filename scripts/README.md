@@ -1,6 +1,7 @@
 # PowerShell Command Request Script
 
 This PowerShell script allows users to request commands from the LOLAD project repository based on specified keywords or technique numbers. It retrieves data from the LOLAD project's HTML table and filters commands accordingly.
+The LOLAD project provides a comprehensive collection of Active Directory techniques, commands, and functions that can be used natively to support offensive security operations and Red Team exercises. These techniques leverage AD’s built-in tools to conduct reconnaissance, privilege escalation, and lateral movement, among other tactics. Understanding these methods helps defenders strengthen AD configurations and improve monitoring capabilities
 
 ## Overview
 
