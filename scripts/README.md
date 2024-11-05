@@ -6,10 +6,10 @@ This PowerShell script allows users to request commands from the LOLAD project r
 
 The script provides an easy way to search for PowerShell commands. Below are screenshots demonstrating the script in action:
 
-![Search Result Example 1](scripts/screen1.png)
+![Search Result Example 1](/scripts/screen1.png)
 *Figure 1: Example of searching for commands with a specific keyword.*
 
-![Search Result Example 2](scripts/screen2.png)
+![Search Result Example 2](/scripts/screen2.png)
 *Figure 2: Example of displaying a specific command by technique number.*
 
 ## Script Overview
