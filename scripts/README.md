@@ -1,3 +1,4 @@
+![PowerShell](https://img.shields.io/badge/PowerShell-%235391FE.svg?style=for-the-badge&logo=powershell&logoColor=white)
 # PowerShell lolAD Search Script
 
 This PowerShell script allows users to request commands from the LOLAD project repository based on specified keywords or technique numbers. It retrieves data from the LOLAD project's HTML table and filters commands accordingly.
